@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 
-# BashBlog, a simple blog system written in a single bash script
-# (C) Carlos Fenollosa <carlos.fenollosa@gmail.com>, 2011-2014 and contributors
+# BashBlog: A simple blogging system contained within a single bash script
+# (C) Carlos Fenollosa <carlos.fenollosa@gmail.com>, 2011-2015 and contributors
 # https://github.com/carlesfe/bashblog/contributors
 # Check out README.md for more details
 
-# Global variables
-# It is recommended to perform a 'rebuild' after changing any of this in the code
+# Global Variables
+# It is recommended to perform a 'rebuild' after changing any Global Variable.
 
-# Config file. Any settings "key=value" written there will override the
-# global_variables defaults. Useful to avoid editing bb.sh and having to deal
-# with merges in VCS
+# Global Config File 
+# Settings in the Global Config File supercede global_variables().
+# Avoid editing bb.sh directly. Configuration File Syntax: "key=value"
 global_config=".config"
 
-# This function will load all the variables defined here. They might be overridden
-# by the 'global_config' file contents
+# Function to load global variables. Superceded by the 'global_config' file.
 global_variables() {
     global_software_name="BashBlog"
     global_software_version="2.4"
