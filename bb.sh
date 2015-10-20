@@ -149,12 +149,12 @@ global_variables() {
 # Check for the validity of some variables
 # DO NOT EDIT THIS FUNCTION unless you know what you're doing
 global_variables_check() {
-    [[ "$header_file" == ".header.html" ]] &&
-        echo "Please check your configuration. '.header.html' is not a valid value for the setting 'header_file'" &&
-        exit
-    [[ "$footer_file" == ".footer.html" ]] &&
-        echo "Please check your configuration. '.footer.html' is not a valid value for the setting 'footer_file'" &&
-        exit
+    [[ header_file = '.header.html' ]] &&
+        echo 'Please check your configuration. \'.header.html\' is not a valid value for the setting \'header_file\'' &&
+        exit 1
+    [[ footer_file = '.footer.html' ]] &&
+        echo 'Please check your configuration. \'.header.html\' is not a valid value for the setting \'header_file\'' &&
+        exit 1
 }
 
 
